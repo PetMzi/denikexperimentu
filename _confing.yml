@@ -2,8 +2,7 @@ title: Deník experimentu
 description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
 baseurl: "/denikexperimentu"
 url: "https://petmzi.github.io"
-
 theme: minima
-
+permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
