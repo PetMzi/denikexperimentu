@@ -2,12 +2,8 @@ title: Deník experimentu
 description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
 baseurl: "/denikexperimentu"
 url: "https://petmzi.github.io"
-author: Petr Mžíček + Claude
 
-remote_theme: jekyll/minima
-
-permalink: /:year/:month/:day/:title/
+theme: minima
 
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
