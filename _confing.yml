@@ -1,8 +1,12 @@
 title: Deník experimentu
-description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
-baseurl: "/denikexperimentu"
+description: Žijeme podle sebe.
+baseurl: "/denikexperimentu" 
 url: "https://petmzi.github.io"
+
 theme: minima
-permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
+# Toto zajistí, že Jekyll uvidí tvoje posty, i kdyby n8n udělalo chybu v čase
+future: true
