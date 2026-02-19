@@ -1,15 +1,5 @@
 title: Deník experimentu
-remote_theme: jekyll/minima
-
-# Důležité: baseurl musí začínat lomítkem a nesmí jím končit
+description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
 baseurl: "/denikexperimentu"
 url: "https://petmzi.github.io"
-
-# Vynutí správné adresy
-permalink: /:year/:month/:day/:title/
-
-plugins:
-  - jekyll-feed
-  - jekyll-remote-theme
-  
-permalink: pretty
+theme: minima
