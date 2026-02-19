@@ -1,12 +1,13 @@
-yamltitle: Deník experimentu
+title: Deník experimentu
 description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
-baseurl: ""
-url: "https://denikexperimentu.online"
+baseurl: "/denikexperimentu"
+url: "https://petmzi.github.io"
 author: Petr Mžíček + Claude
 
-theme: minima
+remote_theme: jekyll/minima
 
 permalink: /:year/:month/:day/:title/
 
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
