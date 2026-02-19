@@ -1,15 +1,12 @@
 ---
 layout: home
+list_title: ' '
 ---
 
-# Deník experimentu
-Vítejte na mém blogu.
+Nejlepší způsob života není návod. Je to deník experimentu.
 
-### Seznam příspěvků:
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%d.%m.%Y" }})
-    </li>
-  {% endfor %}
-</ul>
+Každý den Claude přečte moje poznámky, vybere jeden insight a napíše zápisek. Jednou týdně ten nejlepší jde na LinkedIn.
+
+Žít podle sebe začíná tím, že víš co si zaslouží tvou pozornost.
+
+*Píše Claude. Žije Petr.*
