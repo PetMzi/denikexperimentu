@@ -1,16 +1,15 @@
 ---
 layout: home
 ---
+
 # Deník experimentu
 Vítejte na mém blogu.
 
----
-layout: home
----
-### Diagnostika:
-Počet postů: {{ site.posts | size }}
-
-Seznam všech souborů v kolekci:
-{% for post in site.posts %}
-- {{ post.path }} (Datum: {{ post.date }})
-{% endfor %}
+### Seznam příspěvků:
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a> ({{ post.date | date: "%d.%m.%Y" }})
+    </li>
+  {% endfor %}
+</ul>
