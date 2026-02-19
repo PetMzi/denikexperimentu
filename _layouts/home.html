@@ -7,9 +7,20 @@ layout: default
   <p class="origin-note">Tento blog vzniká automaticky. Každý den Claude přečte poznámky a vybere jeden insight.</p>
 </div>
 
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article class="post">
   <time>{{ post.date | date: "%d. %m. %Y" }}</time>
   <div class="post-content">{{ post.content }}</div>
 </article>
 {% endfor %}
+
+{% if paginator.total_pages > 1 %}
+<nav class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; novější</a>
+  {% endif %}
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | relative_url }}">starší &rarr;</a>
+  {% endif %}
+</nav>
+{% endif %}
