@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background: #fafaf8;
+  color: #2d2d2d;
+  line-height: 1.8;
+}
+
+.wrapper {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+header.site-header {
+  border-bottom: none;
+  padding: 40px 0 20px;
+}
+
+.site-header .wrapper {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.site-title {
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  color: #8B7355;
+}
+
+.site-title:visited {
+  color: #8B7355;
+}
+
+.site-nav {
+  display: none;
+}
+
+footer.site-footer {
+  border-top: 1px solid #e8e4df;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.footer-col-wrapper {
+  font-family: -apple-system, sans-serif;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.intro {
+  margin-bottom: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.intro p {
+  margin-bottom: 0.6em;
+}
+
+.origin-note {
+  margin-top: 1.5em !important;
+  font-size: 0.82rem;
+  color: #aaa;
+  font-style: italic;
+  border-left: 2px solid #e8e4df;
+  padding-left: 12px;
+}
+
+article.post {
+  padding: 40px 0;
+  border-bottom: 1px solid #e8e4df;
+}
+
+article.post:first-of-type {
+  padding-top: 0;
+}
+
+time {
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.78rem;
+  color: #8B7355;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.post-content p {
+  margin-bottom: 1.2em;
+  font-size: 1.05rem;
+}
+
+.post-content p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.post-content em {
+  font-style: italic;
+}
