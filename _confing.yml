@@ -1,0 +1,12 @@
+yamltitle: Deník experimentu
+description: Žijeme podle sebe. Začínáme tím, že víme co si zaslouží pozornost.
+baseurl: ""
+url: "https://denikexperimentu.online"
+author: Petr Mžíček + Claude
+
+theme: minima
+
+permalink: /:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
