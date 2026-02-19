@@ -8,6 +8,6 @@ Prostor je dnes měna. Kanceláře stojí prázdné, zatímco jiní hledají mí
 
 Paradox: Největší realitní business dneška nevlastní žádné nemovitosti. Největší taxislužba žádná auta. Největší hotel žádné pokoje. A přesto to všechno funguje, protože skutečný produkt není prostor – je to důvěra a administrativa kolem něj.
 
-*Architektura záměru začíná tím, že vidíš co ostatní přehlíží.*
+**Architektura záměru začíná tím, že vidíš co ostatní přehlíží.**
 
 *Petr Mžíček + Claude*
