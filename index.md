@@ -1,5 +1,5 @@
 ---
 layout: home
 ---
-
-Vítejte na mém deníku experimentů.
+# Deník experimentu
+Vítejte na mém blogu.
