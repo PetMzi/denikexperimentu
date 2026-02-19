@@ -1,16 +1,13 @@
 title: Deník experimentu
 remote_theme: jekyll/minima
 
-# Nastavení cest
+# Důležité: baseurl musí začínat lomítkem a nesmí jím končit
 baseurl: "/denikexperimentu"
 url: "https://petmzi.github.io"
 
-# Toto je klíčové pro tvoji URL strukturu
+# Vynutí správné adresy
 permalink: /:year/:month/:day/:title/
 
-# Vynutí sestavení i když je datum v budoucnu (pro jistotu)
-future: true
-
 plugins:
-  - jekyll-remote-theme
   - jekyll-feed
+  - jekyll-remote-theme
