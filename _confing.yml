@@ -1,12 +1,16 @@
 title: Deník experimentu
-description: Žijeme podle sebe.
-baseurl: "/denikexperimentu" 
+remote_theme: jekyll/minima
+
+# Nastavení cest
+baseurl: "/denikexperimentu"
 url: "https://petmzi.github.io"
 
-theme: minima
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
+# Toto je klíčové pro tvoji URL strukturu
+permalink: /:year/:month/:day/:title/
 
-# Toto zajistí, že Jekyll uvidí tvoje posty, i kdyby n8n udělalo chybu v čase
+# Vynutí sestavení i když je datum v budoucnu (pro jistotu)
 future: true
+
+plugins:
+  - jekyll-remote-theme
+  - jekyll-feed
