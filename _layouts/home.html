@@ -2,12 +2,14 @@
 layout: default
 ---
 
-{{ content }}
+<div class="intro">
+  {{ content }}
+  <p class="origin-note">Tento blog vzniká automaticky. Každý den Claude přečte poznámky a vybere jeden insight.</p>
+</div>
 
 {% for post in site.posts %}
-  <article>
-    <p><small>{{ post.date | date: "%d. %m. %Y" }}</small></p>
-    {{ post.content }}
-    <hr>
-  </article>
+<article class="post">
+  <time>{{ post.date | date: "%d. %m. %Y" }}</time>
+  <div class="post-content">{{ post.content }}</div>
+</article>
 {% endfor %}
