@@ -3,7 +3,7 @@ layout: home
 list_title: ' '
 ---
 
-Nejlepší způsob života není návod. Je to deník experimentu.
+Nejlepší způsob života není návod. Je to deník experimentu. A je to COOL
 
 Každý den Claude přečte moje poznámky, vybere jeden insight a napíše zápisek. Jednou týdně ten nejlepší jde na LinkedIn.
 
