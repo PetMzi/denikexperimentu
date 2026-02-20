@@ -1,26 +1,25 @@
----
-layout: default
----
-
-<div class="intro">
-  {{ content }}
-  <p class="origin-note">Tento blog vzniká automaticky. Každý den Claude přečte poznámky a vybere jeden insight.</p>
-</div>
-
-{% for post in paginator.posts %}
-<article class="post">
-  <time>{{ post.date | date: "%d. %m. %Y" }}</time>
-  <div class="post-content">{{ post.content }}</div>
-</article>
-{% endfor %}
-
-{% if paginator.total_pages > 1 %}
-<nav class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; novější</a>
-  {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | relative_url }}">starší &rarr;</a>
-  {% endif %}
-</nav>
-{% endif %}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </div>
+  </header>
+  <main class="wrapper">
+    {{ content }}
+  </main>
+  <footer>
+    <div class="wrapper">
+      <p>{{ site.description }}</p>
+    </div>
+  </footer>
+</body>
+</html>
