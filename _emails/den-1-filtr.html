@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Den 1 – Filtr</title>
+  <!--[if mso]>
+  <style type="text/css">
+    body, table, td { font-family: Georgia, 'Times New Roman', serif !important; }
+    .outlook-fix { width: 620px !important; }
+  </style>
+  <![endif]-->
+</head>
+<!--
+  OPRAVY PRO OUTLOOK:
+  1. mso-table-lspace/rspace:0pt na všech tabulkách – zabraňuje phantom mezerám
+  2. bgcolor atributy vedle background-color CSS
+  3. Oddělovače přes výšku <td> s bgcolor místo border-top (spolehlivější)
+  4. Mezery mezi sekcemi řešeny padding na <td> místo margin na <table>
+  5. <p> tagy doplněny o mso-line-height-rule:exactly a mso-margin-*
+  6. Vertikální border karty: width+bgcolor atribut i CSS
+  7. Odstraněn záporný letter-spacing (Outlook nepodporuje)
+  8. Spacer buňky používají místo &nbsp; prázdný obsah (font-size:0 + line-height:0 + &zwnj;)
+-->
+<body style="margin:0; padding:0; background-color:#fdfbf7; font-family:Georgia,'Times New Roman',serif; color:#1c1c1c;" bgcolor="#fdfbf7">
+
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#fdfbf7"
+       style="background-color:#fdfbf7; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+  <tr>
+    <td align="center" style="padding:60px 20px;">
+
+      <!--[if mso]><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="620" style="mso-table-lspace:0pt; mso-table-rspace:0pt;"><tr><td><![endif]-->
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="620"
+             style="max-width:620px; width:100%; mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+
+        <!-- ═══ HLAVIČKA ═══ -->
+        <tr>
+          <td style="padding-bottom:8px;">
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+              <tr>
+                <!-- Velké číslo "1" — záporný letter-spacing odstraněn, Outlook jej ignoruje -->
+                <td width="90" valign="middle" style="font-family:Georgia,'Times New Roman',serif; font-size:72px; font-weight:700; color:#e8e2d6; line-height:1; vertical-align:middle; padding-right:16px; mso-line-height-rule:exactly;">1</td>
+                <td valign="middle" style="vertical-align:middle;">
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                         style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+                    <tr>
+                      <td style="font-family:Arial,Helvetica,sans-serif; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:#b0a898; padding-bottom:4px;">Den první</td>
+                    </tr>
+                    <tr>
+                      <td style="font-family:Georgia,'Times New Roman',serif; font-size:20px; font-weight:700; color:#1c1c1c;">Filtr</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- ═══ KARTA ═══ -->
+        <tr>
+          <td>
+            <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+              <tr>
+                <!-- Levý border karty: bgcolor atribut + background-color CSS + min-width trick -->
+                <td width="3" bgcolor="#1c1c1c" valign="top"
+                    style="background-color:#1c1c1c; font-size:0; line-height:0; min-width:3px;">&#8203;</td>
+                <td bgcolor="#ffffff" style="background-color:#ffffff; padding:44px 52px 40px;">
+
+                  <!-- PEREX -->
+                  <p style="font-family:Georgia,'Times New Roman',serif; font-size:19px; color:#1c1c1c;
+                             margin:0 0 28px 0; line-height:1.6; mso-line-height-rule:exactly;
+                             mso-margin-top-alt:0; mso-margin-bottom-alt:0; mso-padding-alt:0 0 28px 0;">Otevřete své poznámky a nevíte kde začít. Tušíte, že tam někde je důležitá poznámka... nadšení je pryč, přichází paralýza. Co kdyby místo paralýzy přišla energie?</p>
+
+                  <!-- ODDĚLOVAČ — výšková buňka s bgcolor je spolehlivější než border-top -->
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                         style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+                    <tr>
+                      <!-- Mezera nad čárou -->
+                      <td style="font-size:0; line-height:28px; height:28px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <!-- Čára jako 1px buňka s bgcolor -->
+                      <td height="1" bgcolor="#e0d8cc"
+                          style="background-color:#e0d8cc; font-size:0; line-height:0; height:1px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <!-- Mezera pod čárou -->
+                      <td style="font-size:0; line-height:28px; height:28px;">&#8203;</td>
+                    </tr>
+                  </table>
+
+                  <!-- TĚLO -->
+                  <p style="font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.85; color:#2a2520;
+                             margin:0 0 22px 0; mso-line-height-rule:exactly; mso-margin-top-alt:0;">Kdo se rozhodne tvořit poznámky, na začátku si zaznamenává úplně vše. Pak se v tom ztratí.</p>
+
+                  <!-- QUOTE — levý border jako bgcolor buňka -->
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                         style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse; margin:0;">
+                    <tr>
+                      <!-- Mezera nad citátem -->
+                      <td colspan="2" style="font-size:0; line-height:22px; height:22px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <td width="2" bgcolor="#c8b89a" valign="top"
+                          style="background-color:#c8b89a; font-size:0; line-height:0; min-width:2px;">&#8203;</td>
+                      <td style="padding:8px 20px; font-family:Georgia,'Times New Roman',serif; font-size:16px;
+                                 font-style:italic; color:#5a5040; line-height:1.8; mso-line-height-rule:exactly;">K čemu vám je poznámka „Koupit si nové kolo – až zhubnu"?</td>
+                    </tr>
+                    <tr>
+                      <!-- Mezera pod citátem -->
+                      <td colspan="2" style="font-size:0; line-height:22px; height:22px;">&#8203;</td>
+                    </tr>
+                  </table>
+
+                  <p style="font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.85; color:#2a2520;
+                             margin:0 0 22px 0; mso-line-height-rule:exactly; mso-margin-top-alt:0;">Opravdu potřebujete všechny ty poznámky?</p>
+                  <p style="font-family:Georgia,'Times New Roman',serif; font-size:16px; line-height:1.85; color:#2a2520;
+                             margin:0 0 0 0; mso-line-height-rule:exactly; mso-margin-top-alt:0;">Podívejte se na ně upřímně. Kterou z nich využijete do konce tohoto týdne?</p>
+
+                  <!-- CTA BOX — mezera + silná čára + box -->
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                         style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+                    <tr>
+                      <!-- Mezera před CTA -->
+                      <td style="font-size:0; line-height:32px; height:32px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <!-- Silná čára 2px -->
+                      <td height="2" bgcolor="#1c1c1c"
+                          style="background-color:#1c1c1c; font-size:0; line-height:0; height:2px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <td bgcolor="#f5f0e8" style="background-color:#f5f0e8; padding:22px 28px;">
+                        <p style="font-family:Georgia,'Times New Roman',serif; font-size:16px; font-weight:700;
+                                   color:#1c1c1c; margin:0; line-height:1.6; mso-line-height-rule:exactly;
+                                   mso-margin-top-alt:0; mso-margin-bottom-alt:0;"><b>Vyberte jednu poznámku a napište ji na papír. Zítra se jí podíváme na zoubek.</b></p>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- PODPIS -->
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-size:12px; letter-spacing:1px;
+                             text-transform:uppercase; color:#b0a898; margin:28px 0 0 0;
+                             mso-margin-top-alt:0; mso-margin-bottom-alt:0;">Petr Mžíček&nbsp;·&nbsp;<a href="https://petrmzicek.cz" style="color:#8a7a68; text-decoration:none;">petrmzicek.cz</a></p>
+
+                  <!-- PATIČKA -->
+                  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"
+                         style="mso-table-lspace:0pt; mso-table-rspace:0pt; border-collapse:collapse;">
+                    <tr>
+                      <!-- Mezera + čára -->
+                      <td style="font-size:0; line-height:20px; height:20px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <td height="1" bgcolor="#e8e2d6"
+                          style="background-color:#e8e2d6; font-size:0; line-height:0; height:1px;">&#8203;</td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top:20px; font-family:Georgia,'Times New Roman',serif; font-size:12px;
+                                 line-height:1.8; color:#b0a898; mso-line-height-rule:exactly;">
+                        Tento email byl odeslán na adresu *|EMAIL|*. Přihlásili jste se do programu Přestaňte sbírat sny. Začněte je používat.<br>
+                        Odesílatel: Petr Mžíček&nbsp;·&nbsp;petrmzicek.cz&nbsp;·&nbsp;petr&#64;petrmzicek.cz<br><br>
+                        <a href="https://petrmzicek.cz/zasady/" style="color:#8a7a68;">Zásady ochrany osobních údajů</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="*|UNSUBSCRIBE|*" style="color:#8a7a68;">Odhlásit se z odběru</a>
+                      </td>
+                    </tr>
+                  </table>
+
+                </td><!-- konec hlavní td karty -->
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+      </table>
+      <!--[if mso]></td></tr></table><![endif]-->
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>
