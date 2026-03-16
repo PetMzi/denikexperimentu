@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <title>Nastavení – Article Saver</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f1f5f9;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 32px;
+    }
+
+    .card {
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .card h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 20px;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #cbd5e1;
+      margin-bottom: 6px;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #475569;
+      margin-top: 4px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 9px 12px;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      border-color: #2563eb;
+    }
+
+    .toggle-password {
+      position: relative;
+    }
+
+    .toggle-password input {
+      padding-right: 40px;
+    }
+
+    .toggle-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #64748b;
+      cursor: pointer;
+      padding: 2px;
+    }
+    .toggle-btn:hover { color: #94a3b8; }
+
+    .btn-save {
+      width: 100%;
+      padding: 11px;
+      background: #2563eb;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+      margin-top: 4px;
+    }
+    .btn-save:hover { background: #1d4ed8; }
+
+    .btn-test {
+      width: 100%;
+      padding: 9px;
+      background: transparent;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      color: #94a3b8;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s;
+      margin-top: 10px;
+    }
+    .btn-test:hover { border-color: #64748b; color: #cbd5e1; }
+
+    .status {
+      margin-top: 12px;
+      font-size: 13px;
+      text-align: center;
+      min-height: 20px;
+      padding: 8px;
+      border-radius: 6px;
+    }
+    .status.success { background: #14532d33; color: #4ade80; }
+    .status.error   { background: #7f1d1d33; color: #f87171; }
+
+    .link {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 12px;
+    }
+    .link:hover { text-decoration: underline; }
+
+    .help-section {
+      margin-top: 8px;
+      padding: 14px;
+      background: #0f172a;
+      border-radius: 8px;
+      font-size: 12px;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    code {
+      background: #1e293b;
+      padding: 1px 5px;
+      border-radius: 4px;
+      font-family: monospace;
+      color: #7dd3fc;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Nastavení</h1>
+    <p class="subtitle">Article Saver &rarr; Supabase</p>
+
+    <div class="card">
+      <h2>Supabase konfigurace</h2>
+
+      <div class="field">
+        <label for="supabaseUrl">Project URL</label>
+        <input type="text" id="supabaseUrl" placeholder="https://xxxxxxxxxxxx.supabase.co" autocomplete="off" />
+        <div class="hint">Najdeš v Supabase → Settings → API → Project URL</div>
+      </div>
+
+      <div class="field">
+        <label for="supabaseKey">Anon/Public API Key</label>
+        <div class="toggle-password">
+          <input type="password" id="supabaseKey" placeholder="eyJhbGc..." autocomplete="off" />
+          <button class="toggle-btn" id="toggleKey" title="Zobrazit/skrýt klíč">
+            <svg id="eyeIcon" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+              <circle cx="12" cy="12" r="3"/>
+            </svg>
+          </button>
+        </div>
+        <div class="hint">Najdeš v Supabase → Settings → API → anon public key</div>
+      </div>
+
+      <div class="field">
+        <label for="tableName">Název tabulky</label>
+        <input type="text" id="tableName" placeholder="saved_articles" autocomplete="off" />
+        <div class="hint">Výchozí: <code>saved_articles</code></div>
+      </div>
+
+      <button class="btn-save" id="saveBtn">Uložit nastavení</button>
+      <button class="btn-test" id="testBtn">Otestovat připojení</button>
+
+      <div class="status" id="statusMsg" style="display:none;"></div>
+    </div>
+
+    <div class="card">
+      <h2>Nápověda</h2>
+      <div class="help-section">
+        <strong style="color:#94a3b8;">SQL pro vytvoření tabulky:</strong><br/>
+        Spusť SQL migraci ze souboru <code>supabase_migration.sql</code> v Supabase → SQL Editor.<br/><br/>
+        <strong style="color:#94a3b8;">RLS politiky:</strong><br/>
+        Migrace nastaví povolení pro <code>anon</code> roli (INSERT + SELECT).
+        Pokud chceš data vidět jen ty, přidej autentizaci.<br/><br/>
+        <a class="link" href="https://supabase.com/dashboard" target="_blank">Otevřít Supabase Dashboard ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
